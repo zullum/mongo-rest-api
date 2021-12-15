@@ -1,15 +1,25 @@
 {
   "name": "mongo-rest-api",
   "version": "1.0.0",
-  "description": "Mongo REST api example",
+  "description": "REST api example with Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "cypress:open": "cypress open"
   },
   "author": "zullum",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zullum/mongo-rest-api/issues"
   },
-  "homepage": "https://github.com/zullum/mongo-rest-api#readme"
+  "homepage": "https://github.com/zullum/mongo-rest-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cypress": "^9.1.1"
+  }
 }
