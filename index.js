@@ -5,6 +5,11 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//adding delay between each page request
+// app.use((req, res, next) => {
+//   setTimeout(next, 3000);
+// });
+
 app.get("/", function (req, res) {
   res.sendFile("./public/index.html", { root: __dirname });
 });
