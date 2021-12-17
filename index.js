@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const PORT = process.env.PORT || 3000;
+
 //adding delay between each page request
 // app.use((req, res, next) => {
 //   setTimeout(next, 3000);
@@ -37,4 +39,6 @@ app.post("/birthday", function (req, res) {
   res.json("Its not your birthday");
 });
 
-app.listen(3000);
+app.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
+});
